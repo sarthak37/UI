@@ -146,6 +146,10 @@ body {
   
   /* Add this media query for even smaller screens */
   @media screen and (max-width: 480px) {
+    .container {
+      flex-direction: column;
+      margin-top: 150px;
+    }
     .product-div {
       width: calc(100% - 20px); /* One product per row on smaller screens */
     }

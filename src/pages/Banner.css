@@ -39,4 +39,14 @@
       margin-left: 20px; /* Adjust the margin for smaller screens */
     }
   }
+
+  @media screen and (max-width: 48px) {
+    .banner {
+      height: 180px; /* Adjust the height for smaller screens */
+    }
+  
+    .banner .content {
+      margin-left: 20px; /* Adjust the margin for smaller screens */
+    }
+  }
   
