@@ -1,0 +1,42 @@
+.banner {
+    background: linear-gradient(180deg, #DEFBE6 0%, rgba(222, 251, 230, 0) 100%);
+    padding: 20px;
+    color: #000;
+    height: 250px; /* Adjust this value to get the height you want */
+    display: flex;
+  }
+
+  .banner .content {
+    padding-top: 20px;
+    margin-left: 70px;
+  }
+  
+ 
+  
+  .banner .label {
+    font-size: 14px;
+    color: #888;
+  }
+  
+  .banner h1 {
+    font-size: 24px;
+  }
+  
+  .banner h2 {
+    font-size: 20px;
+  }
+  
+  .banner p {
+    font-size: 16px;
+  }
+
+  @media screen and (max-width: 768px) {
+    .banner {
+      height: 180px; /* Adjust the height for smaller screens */
+    }
+  
+    .banner .content {
+      margin-left: 20px; /* Adjust the margin for smaller screens */
+    }
+  }
+  

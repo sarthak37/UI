@@ -1,0 +1,180 @@
+/* CSS for layout */
+body {
+    font-family: Helvetica Neue;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .categories {
+    width: 30%;
+    padding-left:90px ;
+    
+  }
+  
+  .products {
+    width: 98%;
+    padding: 10px;
+  }
+
+  
+
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    
+  }
+  
+  li {
+    margin-top: 10px;
+    cursor: pointer;
+  }
+  
+  li:hover {
+    background-color: #eee;
+  }
+  
+  img {
+    width: 250px;
+    height: 250px;
+  }
+  
+  /* New styles for horizontal product display */
+  .product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .product-div {
+    width: calc(33.33% - 40px);
+    margin-bottom: 20px;
+  }
+  
+  .category-div {
+    margin: 20px; /* Adjust this value as needed */
+    justify-content: space-between;
+  }
+  
+  /* Style for square checkbox */
+  input[type="checkbox"] {
+    width: 13px;
+    height: 13px;
+  }
+  
+  /* Style for search bar */
+  #searchBar {
+    margin-bottom: 30px;
+    padding: 10px;
+    width: 15%;
+    border: 1px solid rgb(170, 165, 165);
+    border-radius: 3px;
+  }
+
+  .search-sort-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .sort-select {
+    position: relative;
+    width: 150px;
+    border-radius: 10px;
+    padding: 5px;
+    background-color: #ffffff;
+    color: #000000;
+    font-size: 15px;
+  }
+  
+  .selected-option {
+    cursor: pointer;
+  }
+  
+  .s {
+    color: rgba(69, 137, 255, 1);
+    font-weight: bold;
+  }
+  
+  .options {
+    position: absolute;
+    width: 100%;
+    border-radius: 25px;
+    background-color: #ffffff;
+  }
+  
+  .option {
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .option:hover {
+    background-color: #ddd;
+  }
+
+  @media screen and (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      margin-top: 150px;
+    }
+  
+    .categories {
+      width: 100%; /* Take full width on smaller screens */
+      padding-left: 0; /* Remove padding on smaller screens */
+      margin-bottom: 50px;
+    }
+  
+    .products {
+      width: 100%; /* Take full width on smaller screens */
+      padding: 0; /* Remove padding on smaller screens */
+    }
+  
+    .product-div {
+      width: calc(50% - 20px); /* Two products per row on smaller screens */
+      margin-bottom: 20px;
+    }
+  
+    .product-container {
+      justify-content: space-between; /* Maintain spacing between products */
+    }
+    
+    /* You can adjust these values as needed for smaller screens */
+  }
+  
+  /* Add this media query for even smaller screens */
+  @media screen and (max-width: 480px) {
+    .product-div {
+      width: calc(100% - 20px); /* One product per row on smaller screens */
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .search-sort-container {
+      flex-direction: column; /* Stack search and sort on top of each other */
+      margin-bottom: 50px;
+        }
+  
+    #searchBar {
+      width: 50%; /* Take full width for search bar */
+      margin-bottom: 50px; /* Add some space between search and sort */
+    }
+  
+    .sort-select {
+      width: 100%; /* Take full width for sort */
+    }
+  
+    .options {
+      position: static; /* Remove the absolute positioning for options */
+      width: 100%;
+      border-radius: 0;
+    }
+  
+    .option {
+      padding: 10px;
+    }
+  }
+  
+  
