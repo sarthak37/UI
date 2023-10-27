@@ -1,5 +1,7 @@
 # UI
 
+DEPLOYED-LINK- https://sarthak-ui.netlify.app/
+
 Screenshots
 
 ![s1](https://github.com/sarthak37/UI/assets/52873771/67d90b92-b8b3-48b2-afe2-ade68cbcec5a)
