@@ -149,6 +149,32 @@ body {
     .product-div {
       width: calc(100% - 20px); /* One product per row on smaller screens */
     }
+
+    .search-sort-container {
+      flex-direction: column; /* Stack search and sort on top of each other */
+      margin-bottom: 50px;
+        }
+  
+    #searchBar {
+      width: 50%; /* Take full width for search bar */
+      margin-bottom: 50px; /* Add some space between search and sort */
+    }
+  
+    .sort-select {
+      width: 100%; /* Take full width for sort */
+    }
+  
+    .options {
+      position: static; /* Remove the absolute positioning for options */
+      width: 100%;
+      border-radius: 0;
+    }
+  
+    .option {
+      padding: 10px;
+    }
+
+    
   }
 
   @media screen and (max-width: 768px) {
