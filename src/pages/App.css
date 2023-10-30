@@ -1,59 +1,100 @@
-/* CSS for layout */
 body {
-    font-family: Helvetica Neue;
-  }
-  
-  .container {
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .categories {
-    width: 30%;
-    padding-left:90px ;
-    
-  }
-  
-  .products {
-    width: 98%;
-    padding: 10px;
-  }
+  font-family: Helvetica Neue;
+}
 
-  
+.container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 60px;
+}
 
+.categories {
+  width: 30%;
+  padding-left:90px ;
+}
+
+.products {
+  width: 98%;
+  padding: 10px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+li:hover {
+  background-color: #eee;
+}
+
+.image-wrapper {
+  width: auto;
+  height: auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.image-wrapper img {
+  width: auto;
+  height: auto;
+  transition: transform 0.2s; /* Animation */
+}
+
+/* Add a hover effect to product images */
+.image-wrapper:hover img {
+  transform: scale(1.1); /* 110% zoom on hover */
+  background: rgba(233, 229, 229, 1); /* Transparent white background */
+  opacity: 0.7; /* Initially hidden */
+  transition: opacity 0.5s;
   
-  ul {
-    list-style: none;
-    padding: 0;
-    
-  }
-  
-  li {
-    margin-top: 10px;
-    cursor: pointer;
-  }
-  
-  li:hover {
-    background-color: #eee;
-  }
-  
-  img {
-    width: 250px;
-    height: 250px;
-  }
-  
-  /* New styles for horizontal product display */
-  .product-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-top: 20px;
-  }
-  
-  .product-div {
-    width: calc(33.33% - 40px);
-    margin-bottom: 20px;
-  }
+}
+
+
+/* Style for the button that appears on hover */
+.hover-button {
+  position: absolute;
+  top: 30%;
+  left: 45%;
+  transform: translate(-50%, 50%); /* Centered horizontally and moved downward */
+  transition: transform 0.2s, opacity 0.2s;
+  opacity: 0;
+  background: #121314;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 25px;
+}
+
+.hover-button:hover {
+  background: rgb(85, 80, 80); /* Transparent white background */
+  opacity: 0.8; /* Initially hidden */
+  transition: opacity 0.5s;
+}
+
+
+.image-wrapper:hover .hover-button {
+  transform: translate(-50%, -50%); /* Centered both horizontally and vertically */
+  opacity: 1;
+}
+
+/* New styles for horizontal product display */
+.product-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.product-div {
+  width: calc(33.33% - 40px);
+  margin-bottom: 20px;
+}
   
   .category-div {
     margin: 20px; /* Adjust this value as needed */
@@ -115,10 +156,10 @@ body {
     background-color: #ddd;
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1200px) {
     .container {
       flex-direction: column;
-      margin-top: 150px;
+      margin-top: 100px;
     }
   
     .categories {
@@ -145,10 +186,10 @@ body {
   }
   
   /* Add this media query for even smaller screens */
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 500px) {
     .container {
       flex-direction: column;
-      margin-top: 150px;
+      margin-top: 100px;
     }
     .product-div {
       width: calc(100% - 20px); /* One product per row on smaller screens */
@@ -181,30 +222,4 @@ body {
     
   }
 
-  @media screen and (max-width: 768px) {
-    .search-sort-container {
-      flex-direction: column; /* Stack search and sort on top of each other */
-      margin-bottom: 50px;
-        }
-  
-    #searchBar {
-      width: 50%; /* Take full width for search bar */
-      margin-bottom: 50px; /* Add some space between search and sort */
-    }
-  
-    .sort-select {
-      width: 100%; /* Take full width for sort */
-    }
-  
-    .options {
-      position: static; /* Remove the absolute positioning for options */
-      width: 100%;
-      border-radius: 0;
-    }
-  
-    .option {
-      padding: 10px;
-    }
-  }
-  
   

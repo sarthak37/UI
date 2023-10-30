@@ -176,28 +176,33 @@ function App() {
     </div>
 
     <div id="productList" className="product-container">
-  {selectedCategory === 'all' ? (
-    categories.map((category) => (
-      <div key={category} className="category-div">
-        <h2>{category}</h2>
-        <div className="product-container">
-          {getCategoryProducts(category).map((product) => (
-            <div key={product.id} className="product-div">
-              <img src={product.url} alt={product.title} />
-            </div>
-          ))}
+          {selectedCategory === 'all' ? (
+            categories.map((category) => (
+              <div key={category} className="category-div">
+                <h2>{category}</h2>
+                <div className="product-container">
+                  {getCategoryProducts(category).map((product) => (
+                    <div key={product.id} className="product-div">
+                      <div className="image-wrapper">
+                        <img src={product.url} alt={product.title} />
+                        <div className="hover-button">Use this</div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))
+          ) : (
+            getCategoryProducts(selectedCategory).map((product) => (
+              <div key={product.id} className="product-div">
+                <div className="image-wrapper">
+                  <img src={product.url} alt={product.title} />
+                  <div className="hover-button">Use this</div>
+                </div>
+              </div>
+            ))
+          )}
         </div>
-      </div>
-    ))
-  ) : (
-    getCategoryProducts(selectedCategory).map((product) => (
-      <div key={product.id} className="product-div">
-        <img src={product.url} alt={product.title} />
-      </div>
-    ))
-  )}
-</div>
-
       </div>
     </div>
   );
