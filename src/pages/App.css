@@ -160,6 +160,7 @@ li:hover {
     .container {
       flex-direction: column;
       margin-top: 150px;
+      margin-left: 20px
     }
   
     .categories {
@@ -190,6 +191,7 @@ li:hover {
     .container {
       flex-direction: column;
       margin-top: 150px;
+      margin-left: 20px
     }
     .product-div {
       width: calc(100% - 20px); /* One product per row on smaller screens */
