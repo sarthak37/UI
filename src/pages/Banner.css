@@ -73,6 +73,10 @@ body {
     .banner {
       height: 350px; /* Adjust the height for smaller screens */
     }
+
+    .sliding-text p {
+      font-size: 50px; /* Adjust this value as needed */
+    }
   
     .banner .content {
       margin-left: 20px; /* Adjust the margin for smaller screens */
@@ -84,6 +88,10 @@ body {
   @media screen and (max-width: 480px) {
     .banner {
       height: 350px; /* Adjust the height for smaller screens */
+    }
+
+    .sliding-text p {
+      font-size: 50px; /* Adjust this value as needed */
     }
   
     .banner .content {
